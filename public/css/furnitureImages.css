@@ -1,0 +1,78 @@
+#artDeco1 {
+    width:84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -89px -49px;
+}
+#artDeco2 {
+    width:84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -199px -49px;
+}
+#artDeco3 {
+    width: 84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -309px -49px;
+}
+
+#victorian1 {
+    width:84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -89px -139px;
+}
+#victorian2 {
+    width:84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -199px -139px;
+}
+#victorian3 {
+    width: 84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -309px -139px;
+}
+
+#modern1 {
+    width:84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -89px -229px;
+}
+#modern2 {
+    width:84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -199px -229px;
+}
+#modern3 {
+    width: 84px;
+    height: 64px;
+    background: url("/images/furnitures.png");
+    background-position: -309px -229px;
+}
+
+#shippingtypetruck{
+    width: 115px;
+    height: 100px;
+    background: url("/images/delivery-icons.jpg");
+    background-position: -175px -190px;
+    background-repeat: no-repeat;
+}
+#shippingtypeplane{
+    width: 115px;
+    height: 100px;
+    background: url("/images/delivery-icons.jpg");
+    background-position: -325px -190px;
+    background-repeat: no-repeat;
+}
+#shippingtypeship{
+    width: 115px;
+    height: 100px;
+    background: url("/images/delivery-icons.jpg");
+    background-position: -470px -190px;
+    background-repeat: no-repeat;
+}

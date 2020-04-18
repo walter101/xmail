@@ -8,8 +8,11 @@ services:
       image: mysql:8.0
       container_name: codespyoffline-mysql
       working_dir: /application
+#      volumes:
+#        - .:/application
+      # Make database perstistance
       volumes:
-        - .:/application
+        - /opt/mysql_data:/var/lib/mysql
       environment:
         - MYSQL_ROOT_PASSWORD=root
         - MYSQL_DATABASE=codespy

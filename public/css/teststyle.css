@@ -1,0 +1,41 @@
+body {
+    position: relative;
+    background: #efefee;
+    min-height: 45rem;
+    padding-bottom: 80px;
+}
+
+html {height:100%}
+
+.banner-space {
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid red;
+}
+.left-space {
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid blue;
+    padding-left:10px;
+}
+.right-space {
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid green;
+}
+.footergraybordered-space {
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid black;
+}
+
+.formInput{
+    width:200px;
+    height:25px;
+
+}
+.formSelect{
+    width:200px;
+    height:25px;
+
+}
