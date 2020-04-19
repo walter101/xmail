@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Entity\Comment;
 use App\Repository\ArticleRepository;
+use App\Repository\CommentRepository;
 use App\Service\MarkdownHelper;
 use Doctrine\ORM\EntityManagerInterface;
 use Nexy\Slack\Client;
@@ -47,7 +49,7 @@ class ArticleController extends AbstractController
     {
         $articles = $articleRepository->findAll();
         $articles = $articleRepository->findBy([], ['publishedAt' => 'desc']);
-        $articles = $articleRepository->findAllOrderByNewest();
+        $articles = $articleRepository->findAllPublishedOrderedByNewest();
 
         return $this->render('article/homepage.html.twig',
             [
@@ -65,12 +67,7 @@ class ArticleController extends AbstractController
      */
     public function show(Article $article, MarkdownHelper $markdown)
     {
-
-        $comments = [
-            'Line-1',
-            'Line-2',
-            'Line-3',
-        ];
+        $comments = $article->getComments();
 
         $articleContent =
 <<<EOF
@@ -88,9 +85,9 @@ EOF;
             [
                 'title' => ucwords(str_replace('_', ' ', $article->getSlug())),
                 'slug' => $article->getSlug(),
-                'comments' => $comments,
                 'articleContent' => $articleContent,
                 'article' => $article,
+                'comments' => $comments,
                 'twigtestvalue' => 'twigtestvalue'
         ]);
     }
