@@ -1,0 +1,33 @@
+{% extends 'spam4u.base.html.twig' %}
+
+{% block title %}Manage account!{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="topic-box">
+            <h2>Some client: To-do insert name here wants access to: to-do (the contactlist)</h2>
+        </div>
+        <div class="content-box">
+            Vind je dat een goed idee?
+            <form action="http://host.docker.internal:8620/temp_code_granted" >
+                <input type="hidden" name="response_type" value="{{ response_type }}">
+                <input type="hidden" name="client_id" value="{{ client_id }}">
+                <input type="hidden" name="redirect_uri" value="{{ redirect_uri }}">
+                <input type="hidden" name="scope" value="{{ scope }}">
+                <input type="hidden" name="state" value="{{ state }}">
+
+                <input type="submit" id="aaa" name="grantAccessdd" value="ja">Ja, waarom niet</input>
+            </form>
+            <form action="http://host.docker.internal:8620/temp_code_not_granted" >
+                <input type="hidden" name="response_type" value="{{ response_type }}">
+                <input type="hidden" name="client_id" value="{{ client_id }}">
+                <input type="hidden" name="redirect_uri" value="{{ redirect_uri }}">
+                <input type="hidden" name="scope" value="{{ scope }}">
+                <input type="hidden" name="state" value="{{ state }}">
+
+                <input type="submit" id="bb" name="grantAccessff" value="nee">Nee, dit ziet er dubieus uit, ik vertrouw het niet!</input>
+            </form>
+        </div>
+    </div>
+{% endblock %}

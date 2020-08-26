@@ -1,0 +1,19 @@
+{% extends 'spam4u.base.html.twig' %}
+
+{% block title %}Manage account!{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="topic-box">
+            <h2>Do you want to authorize Spam4All to read all of your email contacts?</h2>
+            <p>
+                If you choise yes, we will give Spam4All access to read all your email contacts untill you redraw this authorization.
+            </p>
+        </div>
+        <div class="content-box">
+            <a href="{{ path('oauth-send-user-back', {'decision' : 'ja'}) }}">Ja geeft die spam bot toegang tot al mijn contacten</a><br>
+            <a href="{{ path('oauth-send-user-back', {'decision' : 'nee'}) }}">Nee, ik twijfel eingelijk of het verstandig</a>
+        </div>
+    </div>
+{% endblock %}

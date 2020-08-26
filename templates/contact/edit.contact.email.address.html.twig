@@ -1,0 +1,23 @@
+{% extends 'spam4u.base.html.twig' %}
+
+{% block title %}Manage account!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>Contact email address</h2>
+        Add a new contact email address<br>
+        More contact == more spam<br><br>
+
+        {% if contactEmailAddressExists == 'true' %}
+            De ContactEmailAddress allready exists
+        {% endif %}
+        {% if contactEmailAddressAdded == 'true' %}
+            De ContactEmailAddress toegevoegd
+        {% endif %}
+
+
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
